@@ -33,15 +33,14 @@ function getConfig(config_filepath: string): any {
  * @throws {Error} - If an exception occurs while sending the JSON message.
  * @returns {void}
  */
-function sendJSONMessages(JSONData: any, APIConfig: any): void {
+function sendJSONMessages(JSONData: any, APIClientInstance: APIClient): void {
     try {        
-        const apiClient = new APIClient(APIConfig);
-        const response = apiClient.sendJsonRequest(JSONData);
+        const response = APIClientInstance.sendJsonRequest(JSONData);
         response.then((response) => {
             console.log(`API Response for vehicle_id ${JSONData['vehicle_id']} : ${response.status}`);
         })
         .catch((error) => {
-            console.error(`API Error for vehicle_id ${JSONData['vehicle_id']} : ${error.status}`);
+            console.error(`API Error for vehicle_id ${JSONData['vehicle_id']} : ${error}`);
         });
 
     } catch(error){
@@ -52,20 +51,21 @@ function sendJSONMessages(JSONData: any, APIConfig: any): void {
 
 function main(numJsonFiles: number): void {
   /**
-   * Generates fake vehicle data and sends it to an API.
+   * Generates fake vehicle data and sends it to an configured endpoint API.
    * 
    * @param numJsonFiles - The number of sets of fake vehicle data to generate and send to the API.
    * @returns None.
    */
   const APIConfig: any = getConfig(CONFIG_FILE_PATH)
+  const APIClientInstance = new APIClient(APIConfig);
   for (let num = 0; num < numJsonFiles; num++) {
     try{
         const vehicleJSON = generateFakeVehicleData(getRandomDescription());
         const vehicleTelemJSON = generateFakeVehicleTelematicData(vehicleJSON['vehicle_id'], getRandomStatus());
-        sendJSONMessages(vehicleJSON, APIConfig)
-        sendJSONMessages(vehicleTelemJSON, APIConfig)
+        sendJSONMessages(vehicleJSON, APIClientInstance)
+        sendJSONMessages(vehicleTelemJSON, APIClientInstance)
     }catch(error) {
-        console.error(`Exception has reaised executin main function. ${error}`);
+        console.error(`Exception has reaised execution main function. ${error}`);
         throw error;
     }
   }
