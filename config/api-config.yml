@@ -1,0 +1,4 @@
+api-config:
+    endpoint_url: https://z7lvq.wiremockapi.cloud/json2023
+    api_key: YXBpX2NoYWxsZW5nZV8yMDIz
+    num_retries: 3
