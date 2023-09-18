@@ -204,6 +204,7 @@ be unresponsive or unreachable for short periods of time.
 * VS Code 1.82.2
 
 ## Run program
+* Install TypeScripts modules via npm.
 * Execute below command:
 
     ``` tsc .src/MessagesSender.ts ```
