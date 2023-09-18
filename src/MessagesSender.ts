@@ -4,7 +4,7 @@ import * as yaml from 'js-yaml';
 import * as fs from 'fs';
 
 const CONFIG_FILE_PATH = '../config/api-config.yml'
-const NUM_JSON_FILES_TO_SEND = 1
+const NUM_JSON_FILES_TO_SEND = 5
 
 /**
  * Reads a YAML configuration file and returns its contents as an object.
