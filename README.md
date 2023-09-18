@@ -206,11 +206,11 @@ be unresponsive or unreachable for short periods of time.
 ## Run program
 * Execute below command:
 
-    ```bash tsc .src/MessagesSender.ts ```
+    ``` tsc .src/MessagesSender.ts ```
 
 * Execute below command:
 
-    ```bash node ./src/MessagesSender.js ```
+    ``` node ./src/MessagesSender.js ```
 
 ### Sample output successful test
 
