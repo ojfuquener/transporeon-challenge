@@ -46,18 +46,3 @@ export class APIClient {
         }
     }
 }
-
-/**
- * Sends a GET request to the specified URL.
- * @param url - The URL to send the GET request to.
- * @returns A promise that resolves to the Axios response object containing the response data from the API.
- * @throws If an error occurs during the request.
- */
-async function getRequest(url: string): Promise<AxiosResponse> {
-    try {
-        const response: AxiosResponse = await axios.get(url);
-        return response;
-    } catch (error) {
-        throw error;
-    }
-}
