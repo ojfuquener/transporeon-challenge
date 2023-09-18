@@ -46,7 +46,7 @@ export function generateFakeVehicleTelematicData(vehicle_id: string, status: Rec
     vehicle_id,
     timestamp: now.toISOString(),
     location: {
-      long: Number(faker.address.longitude()),
+      lng: Number(faker.address.longitude()),
       lat: Number(faker.address.latitude())
     },
     status

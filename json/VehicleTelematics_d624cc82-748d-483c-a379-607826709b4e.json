@@ -1,0 +1,12 @@
+{
+  "vehicle_id": "d624cc82-748d-483c-a379-607826709b4e",
+  "timestamp": "2023-09-18T07:39:08.423Z",
+  "location": {
+    "lng": 40.8124,
+    "lat": 34.511
+  },
+  "status": {
+    "shipment_status": "DELIVERING",
+    "fuel_deposit_status": "FULL"
+  }
+}
