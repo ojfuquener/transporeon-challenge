@@ -201,7 +201,7 @@ be unresponsive or unreachable for short periods of time.
 * js-yaml
 
 ### IDE
-VS Code
+* VS Code 1.82.2
 
 ## Run program
 * Execute below command:
