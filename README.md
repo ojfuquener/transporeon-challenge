@@ -192,22 +192,25 @@ be unresponsive or unreachable for short periods of time.
 ## Software Environment to implement the solution:
 * Node.js v20.6.
 * npm 10.1.0
+* TypeScript 5.2
 ### TypeScript Modules:
 * fs
 * faker
 * axios
 * axios-retry
-* js-
+* js-yaml
 
 ### IDE
 VS Code
 
 ## Run program
 * Execute below command:
-    ``` tsc .src/MessagesSender.ts ```
+
+    ```bash tsc .src/MessagesSender.ts ```
 
 * Execute below command:
-    ``` node ./src/MessagesSender.js ```
+
+    ```bash node ./src/MessagesSender.js ```
 
 ### Sample output successful test
 
